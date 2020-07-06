@@ -33,9 +33,9 @@ python elman_rnn.py train
 + The difference between two forward passes gives us the gradient for that weight
 + (maybe the code will be self-explanationable)
 
-'''
+```
 python elman_rnn.py gradcheck
-'''
+```
 
 # Your LSTM implementation
 I have already prepared the same template so that you can run your implementation. 
