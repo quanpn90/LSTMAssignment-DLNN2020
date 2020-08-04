@@ -20,7 +20,7 @@ For the vanilla RNN you can run two things:
 - This code is provided as a simple implementation of the Elman RNN model, and how to generate character sequences from this model. You are encouraged to change the model hyper-parameters (model size, learning rate, batch size ...) to see their effects in training.
 
 ```
-python elman_rnn.py train
+python elman-rnn.py train
 ```
 
 
@@ -34,7 +34,7 @@ python elman_rnn.py train
 + (maybe the code will be self-explanationable)
 
 ```
-python elman_rnn.py gradcheck
+python elman-rnn.py gradcheck
 ```
 
 # Your LSTM implementation
