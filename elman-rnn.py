@@ -145,7 +145,7 @@ def forward(inputs, labels, memory, batch_size=1):
 
     # packaging the activations to use in the backward pass
     activations = (xs, cs, hs, os, ps, ys)
-    last_hidden = hs[-1]
+    last_hidden = hs[inputs.shape[1] - 1]
     return loss, activations, last_hidden
 
 
@@ -274,7 +274,7 @@ if option == 'train':
             print('----\n %s \n----' % (txt,))
 
         # forward seq_length characters through the net and fetch gradient
-        loss, activations, memory = forward(inputs, targets, hprev, batch_size=batch_size)
+        loss, activations, hprev = forward(inputs, targets, hprev, batch_size=batch_size)
         gradients = backward(activations)
         dWex, dWxh, dWhh, dWhy, dbh, dby = gradients
         smooth_loss = smooth_loss * 0.999 + loss / batch_size * 0.001
