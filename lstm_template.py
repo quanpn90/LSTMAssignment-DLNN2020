@@ -135,7 +135,7 @@ def forward(inputs, targets, memory):
         # loss += -np.log(ps[t][targets[t],0])
 
     # activations = ()
-    memory = (hs[inputs.shape[-1] - 1], cs[inputs.shape[-1] -1])
+    memory = (hs[input_length - 1], cs[input_length -1])
 
     return loss, activations, memory
 
